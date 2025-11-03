@@ -117,16 +117,16 @@
       - CartridgeAntiMateriel
     capacity: 5
     proto: CartridgeAntiMateriel
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.25
-    sprintModifier: 0.25
+  # - type: SpeedModifiedOnWield
+  #   walkModifier: 0.25
+  #   sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 3
     pvsIncrease: 0.3
   - type: StaticPrice
     price: 3500
-
+  # KS14 change, removed speed debuff for wielding Hristov
 - type: entity
   name: musket
   parent: [ BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband ]
