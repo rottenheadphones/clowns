@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: Contributors to the GoobStation14 project
+#
+# SPDX-License-Identifier: MPL-2.0
+
 # TODO: make more categories
 # Guns
 
@@ -1789,7 +1793,7 @@
   description: uplink-clothing-conducting-gloves-desc
   productEntity: ClothingHandsGlovesConducting
   cost:
-    Telecrystal: 2
+    Telecrystal: 1
   categories:
   - UplinkWearables
 
@@ -1799,7 +1803,7 @@
   description: uplink-backpack-syndicate-desc
   productEntity: ClothingBackpackSyndicate
   cost:
-    Telecrystal: 2
+    Telecrystal: 1
   categories:
     - UplinkWearables
 
@@ -1851,15 +1855,15 @@
   categories:
   - UplinkPointless
 
-- type: listing
-  id: UplinkCatEars
-  name: uplink-cat-ears-name
-  description: uplink-cat-ears-desc
-  productEntity: ClothingHeadHatCatEars
-  cost:
-    Telecrystal: 26
-  categories:
-  - UplinkPointless
+# - type: listing
+#   id: UplinkCatEars
+#   name: uplink-cat-ears-name
+#   description: uplink-cat-ears-desc
+#   productEntity: ClothingHeadHatCatEars
+#   cost:
+#     Telecrystal: 26
+#   categories:
+#   - UplinkPointless
 
 - type: listing
   id: UplinkOutlawHat
@@ -2032,9 +2036,9 @@
   productEntity: BibleNecronomicon
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 1
   cost:
-    Telecrystal: 4
+    Telecrystal: 2
   categories:
   - UplinkJob
   conditions:
@@ -2049,7 +2053,7 @@
   productEntity: HolyHandGrenade
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 14
+    Telecrystal: 8
   cost:
     Telecrystal: 20
   categories:
@@ -2066,9 +2070,9 @@
   productEntity: RevolverCapGunFake
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 3
+    Telecrystal: 2
   cost:
-    Telecrystal: 5
+    Telecrystal: 4
   categories:
   - UplinkJob
   conditions:
@@ -2076,6 +2080,7 @@
     whitelist:
     - Mime
     - Clown
+    - Passenger
 
 - type: listing
   id: uplinkBananaPeelExplosive
@@ -2139,7 +2144,7 @@
     Telecrystal: 2
   productEntity: HotPotato
   cost:
-    Telecrystal: 4
+    Telecrystal: 3
   categories:
   - UplinkJob
   conditions:
@@ -2149,6 +2154,7 @@
     - Botanist
     - Clown
     - Mime
+    - Passenger
 
 - type: listing
   id: UplinkChimpUpgradeKit
@@ -2157,9 +2163,9 @@
   productEntity: WeaponPistolCHIMPUpgradeKit
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 0
   cost:
-    Telecrystal: 4
+    Telecrystal: 2
   categories:
   - UplinkJob
   conditions:
@@ -2183,19 +2189,12 @@
   - !type:BuyerJobCondition
     whitelist:
     - Janitor
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
 
 - type: listing
   id: UplinkSyndicateSpongeBox
   name: uplink-syndicate-sponge-box-name
   description: uplink-syndicate-sponge-box-desc
   icon: { sprite:  Objects/Misc/monkeycube.rsi, state: box}
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 4
   productEntity: SyndicateSpongeBox
   cost:
     Telecrystal: 5 # KS14 change, noone buys ts so let it be cheaper
@@ -2266,11 +2265,8 @@
   name: uplink-smuggler-satchel-name
   description: uplink-smuggler-satchel-desc
   productEntity: ClothingBackpackSatchelSmugglerUnanchored
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 1
   cost:
-    Telecrystal: 2
+    Telecrystal: 1
   categories:
   - UplinkDeception
 
