@@ -399,7 +399,7 @@
     attackRate: 4
     damage:
       types:
-       Blunt: 8
+       Blunt: 10
     soundHit:
       collection: Punch
     animation: WeaponArcFist
@@ -409,6 +409,7 @@
     fiberColor: fibers-blue
   - type: FingerprintMask
   - type: MeleeSpeech
+  - type: Insulated
   - type: ActivatableUI
     key: enum.MeleeSpeechUiKey.Key
     verbOnly: true

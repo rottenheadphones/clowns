@@ -40,8 +40,8 @@
         variation: 0.125
     activatedDamage:
       types:
-        Slash: 15
-        Heat: 15
+        Slash: 18.5
+        Heat: 18.5
         Structural: 20
   - type: MeleeWeapon
     wideAnimationRotation: -135
@@ -116,8 +116,8 @@
         variation: 0.250
     activatedDamage:
         types:
-            Slash: 10
-            Heat: 10
+            Slash: 12.5
+            Heat: 12.5
     deactivatedSecret: true
   - type: ItemToggleActiveSound
     activeSound:
@@ -186,8 +186,8 @@
         variation: 0.250
     activatedDamage:
       types:
-        Slash: 10
-        Heat: 10
+        Slash: 12.5
+        Heat: 12.5
   - type: ComponentToggler
     components:
     - type: Sharp
@@ -303,8 +303,8 @@
         variation: 0.250
     activatedDamage:
         types:
-            Slash: 12
-            Heat: 12
+            Slash: 14.5
+            Heat: 14.5
             Structural: 15
   - type: ItemToggleActiveSound
     activeSound:

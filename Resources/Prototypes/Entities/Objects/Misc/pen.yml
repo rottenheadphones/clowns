@@ -85,7 +85,7 @@
     wideAnimationRotation: -45
     damage:
       types:
-        Piercing: 15
+        Piercing: 18
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
   - type: Tool
@@ -93,6 +93,10 @@
     - Screwing
     useSound:
       collection: Screwdriver
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 30 # ks14
 
 - type: entity
   name: Cybersun pen

@@ -58,6 +58,13 @@
   components:
   - type: MeleeWeapon
     wideAnimationRotation: 90
+    attackRate: 1
+    damage:
+      types:
+        # epic ks buffs
+        Blunt: 15
+        Slash: 15
+        Structural: 10
   - type: IgniteOnMeleeHit
     fireStacks: 1
   - type: Sprite

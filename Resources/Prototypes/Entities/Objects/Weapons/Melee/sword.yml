@@ -124,7 +124,7 @@
   - type: MeleeWeapon
     damage:
       types:
-        Slash: 15
+        Slash: 28
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
@@ -139,6 +139,7 @@
     - Back
     - Belt
   - type: DisarmMalus
+  - type: Reflect
 
 - type: entity
   name: energy katana
@@ -154,7 +155,7 @@
     wideAnimationRotation: -60
     damage:
       types:
-        Slash: 30
+        Slash: 35
   - type: Item
     storedSprite:
       state: storage

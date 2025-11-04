@@ -112,20 +112,6 @@
   - UplinkWeaponry
 
 - type: listing
-  id: UplinkGlovesKnuckleDusters
-  name: uplink-gloves-knuckleduster-name
-  description: uplink-gloves-knuckleduster-desc
-  icon: { sprite: Clothing/Hands/Gloves/KnuckleDusters/syndicateknuckleduster.rsi, state: syndicateknuckleduster }
-  productEntity: ClothingHandsKnuckleDustersSyndicate
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 3
-  cost:
-    Telecrystal: 6
-  categories:
-  - UplinkWeaponry
-
-- type: listing
   id: UplinkDisposableTurret
   name: uplink-disposable-turret-name
   description: uplink-disposable-turret-desc
@@ -151,9 +137,9 @@
   productEntity: EnergyShield
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 4
+    Telecrystal: 3
   cost:
-    Telecrystal: 8
+    Telecrystal: 6
   categories:
   - UplinkWeaponry
   conditions:
