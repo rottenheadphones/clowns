@@ -63,7 +63,6 @@
   table: !type:GroupSelector
     children:
     - id: ThrowingKnivesKit
-    - id: ClothingHandsKnuckleDustersSyndicate
     - id: EnergyDaggerLoud
       weight: 0.5
     - id: WeaponRevolverPython
