@@ -1972,6 +1972,17 @@
   - !type:ListingLimitedStockCondition
     stock: 3
 
+#KS14
+- type: listing
+  id: UplinkBoombox
+  name: uplink-boombox-name
+  description: uplink-boombox-desc
+  productEntity: Boombox
+  cost:
+    Telecrystal: 1 # KS14 - epic for gunning down tiders with an L6 therefore its got to be cheap
+  categories:
+    - UplinkPointless
+
 # Job Specific
 
 - type: listing
@@ -2312,7 +2323,7 @@
 
 
 - type: listing
-  id: UplinkMedsBundle
+  id: UplinkSyndieMedsBundle
   name: uplink-meds-bundle-name
   description: uplink-meds-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateMedicalBundleFilled
