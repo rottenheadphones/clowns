@@ -107,3 +107,9 @@ Entries:
       message: SERBIAAAAAAAAAAAAAAAA
   id: 13
   time: '2025-11-09T17:13:05.0000000+00:00'
+- author: nabegator220
+  changes:
+    - type: Tweak
+      message: Improves the camera monitor significantly.
+  id: 14
+  time: '2025-11-11T07:51:32.0000000+00:00'
