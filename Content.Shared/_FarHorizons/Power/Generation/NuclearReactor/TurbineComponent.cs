@@ -3,13 +3,15 @@
 // SPDX-License-Identifier: MPL-2.0
 
 using Content.Shared.Atmos;
-using Content.Shared.Tools;
+using Content.Shared.Damage;
+using Content.Shared.Dataset;
+using Content.Shared.FixedPoint;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared._FarHorizons.Power.Generation.FissionGenerator;
 
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(fieldDeltas: true)]
 public sealed partial class TurbineComponent : Component
 {
     /// <summary>
@@ -63,16 +65,23 @@ public sealed partial class TurbineComponent : Component
     public float MinTemp = Atmospherics.T20C;
 
     /// <summary>
-    /// Health of the turbine
+    /// The damage this turbine takes every time its overspeed.
     /// </summary>
-    [DataField, AutoNetworkedField]
-    public int BladeHealth = 15;
+    [DataField("overspeedDamage", required: true), AutoNetworkedField]
+    public DamageSpecifier BladeOverspeedDamage;
 
     /// <summary>
-    /// Maximum health of the turbine
+    /// Amount of damage this turbine can be at before its blade would be
+    /// ruined. Dynamically evaluated from the entity's DestructibleComponent.
     /// </summary>
-    [DataField, AutoNetworkedField]
-    public int BladeHealthMax = 15;
+    [AutoNetworkedField]
+    public FixedPoint2 BladeBreakingPoint = new();
+
+    /// <summary>
+    /// Damage messages shown on examine.
+    /// </summary>
+    [DataField]
+    public ProtoId<LocalizedDatasetPrototype>? DamageMessages = "TurbineDamageMessages";
 
     /// <summary>
     /// If the turbine is functional or not
@@ -83,14 +92,13 @@ public sealed partial class TurbineComponent : Component
     /// <summary>
     /// Flag for indicating that energy available is less than needed to turn the turbine
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public bool Stalling = false;
 
     /// <summary>
     /// Flag for RPM being > BestRPM*1.2
     /// </summary>
-    [DataField]
-    public bool Overspeed = false;
+    public bool Overspeed => RPM > BestRPM * 1.2;
 
     /// <summary>
     /// Flag for gas tempurature being > MaxTemp - 500
@@ -116,21 +124,6 @@ public sealed partial class TurbineComponent : Component
     [DataField]
     public EntityUid? AlarmAudioUnderspeed;
 
-    /// <summary>
-    /// Length of repair do-after, in seconds
-    /// </summary>
-    public float RepairDelay = 5;
-
-    /// <summary>
-    /// Amount of fuel consumed for repair
-    /// </summary>
-    public float RepairFuelCost = 15;
-
-    /// <summary>
-    /// Tool capability needed to repair
-    /// </summary>
-    public ProtoId<ToolQualityPrototype> RepairTool = "Welding";
-
     [DataField("inlet")]
     public string InletName { get; set; } = "inlet";
 
@@ -140,7 +133,6 @@ public sealed partial class TurbineComponent : Component
     public bool IsSparking = false;
     public bool IsSmoking = false;
 
-    
     //Debugging
     [ViewVariables(VVAccess.ReadOnly)]
     [DataField("HasPipes")]
