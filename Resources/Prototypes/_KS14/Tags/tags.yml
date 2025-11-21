@@ -4,8 +4,14 @@
 #
 # SPDX-License-Identifier: MPL-2.0
 
-- type: Tag # Ganimed - KS14 fire sensor port
+- type: Tag # Ganimed -> KS14 fire sensor port
   id: FireSensor
 
 - type: Tag # For crafting syringe shotgun out of syringe gun
   id: SyringeGun
+
+- type: Tag # For eshield repair
+  id: PowerCellHigh
+
+- type: Tag # For eshield repair
+  id: BrokenEnergyShield
