@@ -241,3 +241,9 @@ Entries:
       message: Fixed non-critical issues with DADG nuke codes port.
   id: 31
   time: '2025-12-09T16:10:03.0000000+00:00'
+- author: Gerkada
+  changes:
+    - type: Add
+      message: 'Ported the guide to advanced mimery. Long live Livrah! '
+  id: 32
+  time: '2025-12-09T16:11:02.0000000+00:00'
