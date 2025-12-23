@@ -45,12 +45,15 @@
       Ammonia: stationAmmonia
       NitrousOxide: stationNO
       Frezon: danger
+<<<<<<< HEAD
       Zipion: stationZipion
       Argon: GasArgon
   - type: Tag
     tags:
       - AirSensor
       - ForceFixRotations
+=======
+>>>>>>> upstream/master
   - type: GuideHelp
     guides:
     - DeviceMonitoringAndControl
@@ -112,6 +115,10 @@
         enum.PowerDeviceVisualLayers.Powered:
           True: { state: gsensor1 }
           False: { state: gsensor0 }
+  - type: Tag
+    tags:
+    - AirSensor
+    - ForceFixRotations
 
 - type: entity
   parent: BaseItem
