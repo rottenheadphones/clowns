@@ -357,3 +357,9 @@ Entries:
       message: Decreased amount of salt ore.
   id: 44
   time: '2025-12-25T12:57:09.0000000+00:00'
+- author: Gerkada
+  changes:
+    - type: Add
+      message: Deconstruction with RCD returns half the charges.
+  id: 45
+  time: '2025-12-25T15:34:23.0000000+00:00'
