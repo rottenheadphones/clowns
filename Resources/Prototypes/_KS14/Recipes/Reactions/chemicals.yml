@@ -18,7 +18,7 @@
   products:
     Klovnide: 4
 
-- type: reaction # since plasma is essentially tritiated ethanol, it would react EVIL with klovnide (what did i mean by this?)
+- type: reaction # since plasma is essentially tritiated ethanol, it would react very explosively with klovnide ==
   id: KlovnideExplosion
   impact: High
   priority: 25
@@ -29,9 +29,9 @@
     Plasma:
       amount: 1
   effects:
-  - !type:ExplosionReactionEffect
-    explosionType: FireBomb
-    intensityPerUnit: 0.75
-    maxTotalIntensity: 130
-    intensitySlope: 5
-    maxIntensity: 12
+  - !type:ExplosionReactionEffect # insanely explosive
+    explosionType: HardBomb
+    intensityPerUnit: 4
+    maxTotalIntensity: 250
+    intensitySlope: 1
+    maxIntensity: 40
