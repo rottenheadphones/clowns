@@ -363,3 +363,9 @@ Entries:
       message: Deconstruction with RCD returns half the charges.
   id: 45
   time: '2025-12-25T15:34:23.0000000+00:00'
+- author: LaCumbiaDelCoronavirus
+  changes:
+    - type: Tweak
+      message: Changed some visuals to look better
+  id: 46
+  time: '2025-12-25T17:16:42.0000000+00:00'
