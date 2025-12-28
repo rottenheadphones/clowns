@@ -409,3 +409,11 @@ Entries:
       message: The RD now has an anomaly locator roundstart.
   id: 52
   time: '2025-12-28T13:23:53.0000000+00:00'
+- author: Gerkada
+  changes:
+    - type: Add
+      message: >-
+        Smart equip to your back slot is now available and is bound to F by
+        default.
+  id: 53
+  time: '2025-12-28T13:51:53.0000000+00:00'
