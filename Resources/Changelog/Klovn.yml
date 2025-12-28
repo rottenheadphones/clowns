@@ -389,3 +389,11 @@ Entries:
       message: Added voxes and dwarves back!
   id: 49
   time: '2025-12-28T10:54:39.0000000+00:00'
+- author: DecemberEpsilon
+  changes:
+    - type: Add
+      message: Added Meta and Omega back into rotation!
+    - type: Remove
+      message: Removed Amber, Plasma, Exo, Oasis from rotation
+  id: 50
+  time: '2025-12-28T10:55:37.0000000+00:00'
