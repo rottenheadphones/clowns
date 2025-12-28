@@ -24,7 +24,7 @@
 # SPDX-FileCopyrightText: 2025 metalgearsloth
 # SPDX-FileCopyrightText: 2025 themias
 #
-# SPDX-License-Identifier: MPL-2.0
+# SPDX-License-Identifier: MIT
 
 - type: entity
   abstract: true
@@ -51,13 +51,13 @@
       map: [ "enum.DisposalUnitVisualLayers.OverlayFlush" ]
     - state: dispover-charge
       map: [ "enum.DisposalUnitVisualLayers.OverlayCharging" ]
-      shader: Emissive
+      shader: Emissive # KS14
     - state: dispover-ready
       map: [ "enum.DisposalUnitVisualLayers.OverlayReady" ]
-      shader: Emissive
+      shader: Emissive # KS14
     - state: dispover-full
       map: [ "enum.DisposalUnitVisualLayers.OverlayFull" ]
-      shader: Emissive
+      shader: Emissive # KS14
     - state: dispover-handle
       map: [ "enum.DisposalUnitVisualLayers.OverlayEngaged" ]
   - type: Physics
@@ -153,13 +153,13 @@
         map: [ "enum.DisposalUnitVisualLayers.OverlayFlush" ]
       - state: dispover-charge
         map: [ "enum.DisposalUnitVisualLayers.OverlayCharging" ]
-        shader: Emissive
+        shader: Emissive # KS14
       - state: dispover-ready
         map: [ "enum.DisposalUnitVisualLayers.OverlayReady" ]
-        shader: Emissive
+        shader: Emissive # KS14
       - state: dispover-full
         map: [ "enum.DisposalUnitVisualLayers.OverlayFull" ]
-        shader: Emissive
+        shader: Emissive # KS14
       - state: mailover-handle
         map: [ "enum.DisposalUnitVisualLayers.OverlayEngaged" ]
   - type: Construction
