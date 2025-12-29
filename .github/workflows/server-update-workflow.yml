@@ -27,13 +27,16 @@ jobs:
     - name: Send POST update request to watchdog
       # Output of curl is hidden and we only say if something ever happened or nothing ever happened (as usual).
       run: |
-        if curl -s -f -o /dev/null \
-            -v \
-            -X POST \
-            -u ${{ vars.WATCHDOG_INSTANCE_NAME }}:${{ secrets.WATCHDOG_INSTANCE_API_TOKEN }} \
-            "http://${{ secrets.WATCHDOG_IP_AND_PORT }}/instances/${{ vars.WATCHDOG_INSTANCE_NAME }}/update"; then
-          echo "Update request was successfully sent. This is not indicative of whether or not the server actually cares."
+        STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+          -X POST \
+          -u ${{ vars.WATCHDOG_INSTANCE_NAME }}:${{ secrets.WATCHDOG_INSTANCE_API_TOKEN }} \
+          "http://${{ secrets.WATCHDOG_IP_AND_PORT }}/instances/${{ vars.WATCHDOG_INSTANCE_NAME }}/update")
+        
+        echo "Status code: $STATUS_CODE"
+        
+        if [ "$STATUS_CODE" -eq 200 ]; then
+          echo "Status code of POST request (200) indicates success."
         else
-          echo "Update request failed to sent. This is not indicative of whether or not the server actually cares."
+          echo "POST request failed with status code $STATUS_CODE"
           exit 1
         fi
