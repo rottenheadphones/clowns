@@ -31,12 +31,10 @@ jobs:
           -X POST \
           -u ${{ vars.WATCHDOG_INSTANCE_NAME }}:${{ secrets.WATCHDOG_INSTANCE_API_TOKEN }} \
           "http://${{ secrets.WATCHDOG_IP_AND_PORT }}/instances/${{ vars.WATCHDOG_INSTANCE_NAME }}/update")
-        
-        echo "Status code: $STATUS_CODE"
-        
+
         if [ "$STATUS_CODE" -eq 200 ]; then
-          echo "Status code of POST request (200) indicates success."
+          echo "Status code of POST request ($STATUS_CODE) indicates success."
         else
-          echo "POST request failed with status code $STATUS_CODE"
+          echo "POST request failed with status code $STATUS_CODE."
           exit 1
         fi
