@@ -78,11 +78,11 @@
   - type: Sprite
     layers:
     - state: multi_shader
-      color: "#5632a8"
+      color: "#00d5ff"
     - state: double_stripe
-      color: "#36b0e0"
+      color: "#990685"
     - state: outline
-      color: "#5632a8"
+      color: "#00d5ff"
     - state: window-base
   - type: GasCanister
     gasMixture:
@@ -125,8 +125,8 @@
     layers:
     - state: window-base_broken
     - state: multi_shader_broken
-      color: "#5632a8"
+      color: "#00d5ff"
     - state: double_stripe_broken
-      color: "#36b0e0"
+      color: "#990685"
     - state: outline_broken
-      color: "#5632a8"
+      color: "#00d5ff"
