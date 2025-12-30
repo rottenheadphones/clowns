@@ -445,3 +445,14 @@ Entries:
       message: Fixed TC price inconsistencies.
   id: 57
   time: '2025-12-30T16:35:26.0000000+00:00'
+- author: Gerkada
+  changes:
+    - type: Add
+      message: You can now suicide and execute people with guns!
+    - type: Add
+      message: >-
+        The bartender now has a russian revolver in his booze cabinet, it cannot
+        be used as a normal gun, but it has no ammo UI, making it perfect for
+        russian roulette games!
+  id: 58
+  time: '2025-12-30T16:37:13.0000000+00:00'
