@@ -473,3 +473,15 @@ Entries:
         G.O.R.I.L.L.A. gauntlet. 
   id: 60
   time: '2025-12-31T01:08:31.0000000+00:00'
+- author: Gerkada
+  changes:
+    - type: Add
+      message: >-
+        The execute verb is now available on a wide variety of rifles, SMGs,
+        shotguns, and hitscan laser weapons.
+    - type: Add
+      message: You can now execute unrestricted targets with rifles.
+    - type: Tweak
+      message: Made the whole system event-based.
+  id: 61
+  time: '2025-12-31T13:37:47.0000000+00:00'
