@@ -460,7 +460,8 @@ Entries:
   changes:
     - type: Add
       message: >-
-        Added the plasma cutter, available to salvage in salvage vendors. It is
-        refilled by using plasma sheets or raw plasma ore on it.
+        Added the plasma cutter, available to salvage in their lockers. It is
+        refilled by inserting plasma sheets or raw plasma ore into it. An advanced
+        variant exists and is researchable in T2 Mass Excavation.
   id: 59
   time: '2025-12-31T00:46:31.0000000+00:00'
